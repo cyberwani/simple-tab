@@ -20,7 +20,7 @@ class DS_WP_Simple_Tab {
 	}
 	
 	public static function register_script() {
-		$js = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '/js/jquery.taboverride.min.js' : '/js/jquery.taboverride.min.js';
+		$js = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '/js/jquery.taboverride.js' : '/js/jquery.taboverride.min.js';
 
 		wp_register_script(
 			'jquery-tab-override',
