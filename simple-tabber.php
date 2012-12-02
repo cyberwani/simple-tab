@@ -1,5 +1,6 @@
 <?php
 /*
+Test
 Plugin Name: Simple Tab
 Plugin URI: http://wpgrafie.de/
 Description: Allows you to use tabs in HTML post editor.
