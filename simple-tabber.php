@@ -26,6 +26,13 @@
  *	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+/**
+ * Don't call this file directly.
+ */
+if ( ! class_exists( 'WP' ) ) {
+	die();
+}
+
 class DS_WP_Simple_Tab {
 	private static $class;
 
