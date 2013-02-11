@@ -88,5 +88,5 @@ class DS_WP_Simple_Tab {
 	}
 }
 
-add_action( 'plugins_loaded', array( 'DS_WP_Simple_Tab', 'init' ) );
+add_action( 'admin_init', array( 'DS_WP_Simple_Tab', 'init' ) );
 ?>
