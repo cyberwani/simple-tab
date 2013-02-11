@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Simple Tab
- * Version: 0.2
+ * Version: 1.0
  * Description: Allows you to use tabs in HTML post editor.
  * Author: Dominik Schilling
  * Author URI: http://wphelper.de/
- * Plugin URI: https://github.com/ocean90/Simple-Tab
+ * Plugin URI: https://github.com/ocean90/simple-tab
  *
  * License: GPLv2 or later
  *
