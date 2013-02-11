@@ -39,12 +39,10 @@ class DS_WP_Simple_Tab {
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'register_script' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_script' ) );
-		add_action( 'admin_footer-post.php', array( __CLASS__, 'print_script' ) );
-		add_action( 'admin_footer-post-new.php', array( __CLASS__, 'print_script' ) );
 	}
 
 	public static function register_script() {
-		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '.min' : '';
+		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 		wp_register_script(
 			'taboverride',
@@ -61,23 +59,19 @@ class DS_WP_Simple_Tab {
 			'3.2.3',
 			true
 		);
+
+		wp_register_script(
+			'simple-tab',
+			plugins_url( "js/simple-tab$suffix.js", __FILE__ ),
+			array( 'jquery-taboverride' ),
+			'0.1',
+			true
+		);
 	}
 
 	public static function enqueue_script( $hook_suffix ) {
 		if ( in_array( $hook_suffix, array( 'post-new.php', 'post.php' ) ) )
-			wp_enqueue_script( 'jquery-taboverride' );
-	}
-
-	public static function print_script() {
-		?>
-		<script type="text/javascript">
-		( function( $ ) {
-			$(document).ready( function() {
-				$( '#content' ).tabOverride();
-			});
-		} )( jQuery );
-		</script>
-		<?php
+			wp_enqueue_script( 'simple-tab' );
 	}
 
 	public static function init() {
@@ -89,4 +83,3 @@ class DS_WP_Simple_Tab {
 }
 
 add_action( 'admin_init', array( 'DS_WP_Simple_Tab', 'init' ) );
-?>
