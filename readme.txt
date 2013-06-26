@@ -41,9 +41,7 @@ To upload the plugin through WordPress, instead of FTP:
 
 
 == Usage ==
-* To enable a public post preview check the box below the edit post box.
-* The link will be displayed if the checkbox is checked, just copy and share the link with your frieds.
-* To disable a preview just uncheck the box.
+* Press the tab key. ;-)
 
 
 == Change Log ==
